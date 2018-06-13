@@ -18,7 +18,7 @@ $(document).ready(function () {
         var trainName = $('#newTrain').val().trim();
         var des = $('#newDes').val().trim();
         var time = $("#newTime").val().trim();
-        validateHhMm(time)
+        validateTime(time)
         var freq = $('#newFreq').val().trim();
 
 
@@ -85,7 +85,7 @@ $(document).ready(function () {
     });
 
 
-    function validateHhMm(timeInput) {
+    function validateTime(timeInput) {
         var isValid = /^([0-1]?[0-9]|2[0-3]):([0-5][0-9])(:[0-5][0-9])?$/.test(timeInput);
 
         if (isValid) {
